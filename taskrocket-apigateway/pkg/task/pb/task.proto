@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package task;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "./pkg/task/pb";
+
+enum Status {
+  STATUS_UNSPECIFIED = 0;
+  STATUS_OPEN = 1;
+  STATUS_CLOSED = 2;
+}
+
+service TaskService {
+  rpc CreateTask(CreateTaskRequest) returns (CreateTaskResponse) {}
+}
+
+message CreateTaskRequest {
+  string title = 1;
+  string description = 2;
+  Status status = 3;
+  google.protobuf.Timestamp due_date = 4;
+}
+
+message CreateTaskResponse {
+  int64 status = 1;
+  string error = 2;
+  int64 id = 3;
+}
+
+message Task {
+  string id = 1;
+  string title = 2;
+  string description = 3;
+  Status status = 4;
+  google.protobuf.Timestamp due_date = 5;
+}

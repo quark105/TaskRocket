@@ -1,0 +1,58 @@
+repos:
+  # General
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  # Golang
+  - repo: https://github.com/tekwizely/pre-commit-golang
+    rev: master
+    hooks:
+      #
+      # Go Build
+      #
+      - id: go-build-repo-mod
+      #
+      # Go Mod Tidy
+      #
+      - id: go-mod-tidy-repo
+      #
+      # Go Test
+      # TODO Enable these hooks after adding tests
+      #   - id: go-test-mod
+      #
+      # Go Vet
+      #
+      - id: go-vet-repo-mod
+      #
+      # Revive
+      #
+      - id: go-revive-repo-mod
+      #
+      # GoSec
+      #
+      - id: go-sec-repo-mod
+      #
+      # StaticCheck
+      #
+      - id: go-staticcheck-repo-mod
+      #
+      # Formatters
+      #
+      - id: go-fumpt-repo
+      - id: go-imports      # replaces go-fmt
+      - id: go-returns      # replaces go-imports & go-fmt
+      #
+      # Style Checkers
+      #
+      - id: go-critic
+      #
+      # GolangCI-Lint
+      #
+      - id: golangci-lint-repo-mod
+  # Protobuf
+  - repo: https://github.com/yoheimuta/protolint
+    rev: v0.45.0
+    hooks:
+      - id: protolint
