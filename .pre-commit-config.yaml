@@ -20,7 +20,7 @@ repos:
       #
       # Go Test
       # TODO Enable these hooks after adding tests
-      #   - id: go-test-mod
+      # - id: go-test-mod
       #
       # Go Vet
       #
@@ -41,8 +41,8 @@ repos:
       # Formatters
       #
       - id: go-fumpt-repo
-      - id: go-imports      # replaces go-fmt
-      - id: go-returns      # replaces go-imports & go-fmt
+        args: [ -w ]
+      - id: go-imports
       #
       # Style Checkers
       #
