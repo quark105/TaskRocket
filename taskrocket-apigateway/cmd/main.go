@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/go-chi/chi/v5"
-	"github.com/sebastianpacuk/taskrocket-apigateway/pkg/config"
-	"github.com/sebastianpacuk/taskrocket-apigateway/pkg/task"
+	"github.com/sebastianpacuk/taskrocket/taskrocket-apigateway/pkg/config"
+	"github.com/sebastianpacuk/taskrocket/taskrocket-apigateway/pkg/task"
 )
 
 const readHeaderTimeout = 3 * time.Second

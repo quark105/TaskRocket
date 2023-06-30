@@ -6,8 +6,8 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/sebastianpacuk/taskrocket-apigateway/pkg/config"
-	"github.com/sebastianpacuk/taskrocket-apigateway/pkg/task/pb"
+	"github.com/sebastianpacuk/taskrocket/taskrocket-apigateway/pkg/config"
+	"github.com/sebastianpacuk/taskrocket/taskrocket-apigateway/pkg/task/pb"
 )
 
 type ServiceClient struct {

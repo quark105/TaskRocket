@@ -4,9 +4,9 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/sebastianpacuk/taskrocket-tasks/pkg/db"
-	"github.com/sebastianpacuk/taskrocket-tasks/pkg/models"
-	pb "github.com/sebastianpacuk/taskrocket-tasks/pkg/pb"
+	"github.com/sebastianpacuk/taskrocket/taskrocket-tasks/pkg/db"
+	"github.com/sebastianpacuk/taskrocket/taskrocket-tasks/pkg/models"
+	pb "github.com/sebastianpacuk/taskrocket/taskrocket-tasks/pkg/pb"
 )
 
 type Server struct {

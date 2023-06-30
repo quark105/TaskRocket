@@ -6,7 +6,7 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 
-	"github.com/sebastianpacuk/taskrocket-tasks/pkg/models"
+	"github.com/sebastianpacuk/taskrocket/taskrocket-tasks/pkg/models"
 )
 
 type Handler struct {

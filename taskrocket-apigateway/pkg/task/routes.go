@@ -4,15 +4,15 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
-	"github.com/sebastianpacuk/taskrocket-apigateway/pkg/config"
-	"github.com/sebastianpacuk/taskrocket-apigateway/pkg/task/routes"
+	"github.com/sebastianpacuk/taskrocket/taskrocket-apigateway/pkg/config"
+	"github.com/sebastianpacuk/taskrocket/taskrocket-apigateway/pkg/task/routes"
 )
 
 func RegisterRoutes(r *chi.Mux, c *config.Config) {
 	svc := &ServiceClient{
 		Client: InitTaskServiceClient(c),
 	}
-	r.Route("/task", func(r chi.Router) {
+	r.Route("/tasks", func(r chi.Router) {
 		r.Post("/", svc.CreateTask)
 	})
 }

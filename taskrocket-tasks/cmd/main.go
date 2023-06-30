@@ -7,10 +7,10 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/sebastianpacuk/taskrocket-tasks/pkg/config"
-	"github.com/sebastianpacuk/taskrocket-tasks/pkg/db"
-	pb "github.com/sebastianpacuk/taskrocket-tasks/pkg/pb"
-	services "github.com/sebastianpacuk/taskrocket-tasks/pkg/services"
+	"github.com/sebastianpacuk/taskrocket/taskrocket-tasks/pkg/config"
+	"github.com/sebastianpacuk/taskrocket/taskrocket-tasks/pkg/db"
+	pb "github.com/sebastianpacuk/taskrocket/taskrocket-tasks/pkg/pb"
+	services "github.com/sebastianpacuk/taskrocket/taskrocket-tasks/pkg/services"
 )
 
 func main() {

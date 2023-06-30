@@ -1,4 +1,4 @@
-module github.com/sebastianpacuk/taskrocket-tasks
+module github.com/sebastianpacuk/taskrocket/taskrocket-tasks
 
 go 1.20
 

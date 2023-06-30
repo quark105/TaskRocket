@@ -1,4 +1,4 @@
-module github.com/sebastianpacuk/taskrocket-apigateway
+module github.com/sebastianpacuk/taskrocket/taskrocket-apigateway
 
 go 1.20
 

@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/sebastianpacuk/taskrocket-apigateway/pkg/task/pb"
+	"github.com/sebastianpacuk/taskrocket/taskrocket-apigateway/pkg/task/pb"
 	"google.golang.org/protobuf/types/known/timestamppb"
 )
 
