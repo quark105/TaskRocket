@@ -10,6 +10,8 @@ import (
 	"github.com/sebastianpacuk/taskrocket-apigateway/pkg/task"
 )
 
+const readHeaderTimeout = 3 * time.Second
+
 func main() {
 	c, err := config.LoadConfig()
 	if err != nil {
@@ -21,7 +23,8 @@ func main() {
 
 	server := &http.Server{
 		Addr:              c.Port,
-		ReadHeaderTimeout: 3 * time.Second,
+		Handler:           r,
+		ReadHeaderTimeout: readHeaderTimeout,
 	}
 
 	log.Println("Starting server on port", c.Port)

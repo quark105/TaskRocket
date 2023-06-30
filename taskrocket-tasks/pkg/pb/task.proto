@@ -4,7 +4,7 @@ package task;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "./pkg/task/pb";
+option go_package = "./pkg/pb";
 
 enum Status {
   STATUS_UNSPECIFIED = 0;
