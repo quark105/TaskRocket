@@ -1,16 +1,36 @@
 package logger
 
 import (
-	"os"
-
-	"github.com/sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 )
 
-var Log *logrus.Logger
+var ServiceLogger *log.Entry
 
-func init() {
-	Log = logrus.New()
-	Log.Formatter = &logrus.JSONFormatter{}
-	Log.Level = logrus.DebugLevel
-	Log.Out = os.Stdout
+type LoggingConfig struct {
+	ServiceName string `mapstructure:"service"`
+	Formatter   string `mapstructure:"formatter"`
+	Level       string `mapstructure:"level"`
+}
+
+func ConfigureLogger(lc LoggingConfig) {
+	// Text formatter is set by default
+	if lc.Formatter == "json" {
+		log.SetFormatter(&log.JSONFormatter{})
+	}
+
+	// INFO level is set by default
+	switch lc.Level {
+	case "TRACE":
+		log.SetLevel(log.TraceLevel)
+	case "DEBUG":
+		log.SetLevel(log.DebugLevel)
+	case "WARN":
+		log.SetLevel(log.WarnLevel)
+	case "ERROR":
+		log.SetLevel(log.ErrorLevel)
+	}
+
+	ServiceLogger = log.WithFields(log.Fields{
+		"service": lc.ServiceName,
+	})
 }
