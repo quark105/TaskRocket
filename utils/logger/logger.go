@@ -30,7 +30,9 @@ func ConfigureLogger(lc LoggingConfig) {
 		log.SetLevel(log.ErrorLevel)
 	}
 
-	ServiceLogger = log.WithFields(log.Fields{
-		"service": lc.ServiceName,
-	})
+	ServiceLogger = log.WithField("service", lc.ServiceName)
+}
+
+func init() {
+	ServiceLogger = log.WithField("application", "TaskRocket")
 }

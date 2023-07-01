@@ -1,0 +1,7 @@
+port: 50001
+dbUrl: "postgres://postgres:postgres@localhost:5432/tasks"
+
+logging:
+  service: taskrocket-tasks
+  formatter: json
+  level: DEBUG

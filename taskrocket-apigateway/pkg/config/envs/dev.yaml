@@ -1,0 +1,8 @@
+port: 9000
+
+taskSVCUrl: "localhost:50001"
+
+logging:
+  service: taskrocket-apigateway
+  formatter: json
+  level: DEBUG
