@@ -12,7 +12,7 @@ The aim for TaskRocket is to establish a microservices application that can be e
 helm charts or kustomize. The application is designed to leverage the capabilities of the Istio service mesh fully.
 Various design and technology choices have been made to familiarize myself with different technologies and concepts.
 
-Feedback, suggestions, or contributions in any form are greatly appreciated.
+Feedback, suggestions, or contributions in any form are greatly appreciated.  
 Feel free to contact me via email at github@sebapacuk.com
 
 Below you'll find the current plan for the microservices in TaskRocket.
